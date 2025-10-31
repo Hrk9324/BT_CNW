@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Form 2 - Khảo sát</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8; /* nền nhẹ */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .form-box {
+      background: #ffffff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      width: 320px;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0077b6;
+    }
+    label {
+      display: block;
+      margin: 8px 0;
+      font-size: 15px;
+    }
+    .options {
+      margin-left: 15px;
+      margin-bottom: 15px;
+    }
+    .btn-group {
+      text-align: center;
+      margin-top: 15px;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 8px 14px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"] {
+      background: #0077b6;
+      color: white;
+    }
+    input[type="reset"] {
+      background: #ccc;
+    }
+    input[type="submit"]:hover {
+      background: #005f8a;
+    }
+    input[type="reset"]:hover {
+      background: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h3>Form 2: Khảo sát</h3>
+    <form>
+      <label>Giới tính:</label>
+      <div class="options">
+        <label><input type="radio" name="gioitinh" value="nam"> Nam</label><br>
+        <label><input type="radio" name="gioitinh" value="nu"> Nữ</label>
+      </div>
+
+      <label>Sở thích:</label>
+      <div class="options">
+        <label><input type="checkbox" name="sothich" value="thethao"> Thể thao</label><br>
+        <label><input type="checkbox" name="sothich" value="amnhac"> Âm nhạc</label><br>
+        <label><input type="checkbox" name="sothich" value="docsach"> Đọc sách</label>
+      </div>
+
+      <div class="btn-group">
+        <input type="submit" value="Gửi">
+        <input type="reset" value="Làm lại">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Form 33 - Blur & Focus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .form-box {
+      background: #ffffff;
+      padding: 25px 30px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+      width: 280px;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin: 10px 0 4px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+  <script>
+    function toMixedCase(str) {
+      let result = "";
+      for (let i = 0; i < str.length; i++) {
+        result += (i % 2 === 0) ? str[i].toUpperCase() : str[i].toLowerCase();
+      }
+      return result;
+    }
+    function handleBlur() {
+      var text1 = document.getElementById("text1").value;
+      document.getElementById("text2").value = toMixedCase(text1);
+    }
+    function setFocus() {
+      document.getElementById("text1").focus();
+    }
+  </script>
+</head>
+<body onload="setFocus()">
+  <div class="form-box">
+    <h3>Blur & Focus</h3>
+    <form name="BlurFocusForm">
+      <label>Ô nhập liệu 1:</label>
+      <input type="text" id="text1" onblur="handleBlur()">
+
+      <label>Ô nhập liệu 2:</label>
+      <input type="text" id="text2">
+    </form>
+  </div>
+</body>
+</html>
